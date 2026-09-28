@@ -1,0 +1,17 @@
+<template>
+    <div
+        class="kanban-card"
+        draggable="true"
+        ondragstart={handleDragStart}
+        onclick={handleOpenRecord}
+        role="button"
+        tabindex="0"
+    >
+        <p class="case-number">{caseRecord.CaseNumber}</p>
+        <p class="subject">{caseRecord.Subject}</p>
+        <div class="card-footer">
+            <span class={priorityClass}>{caseRecord.Priority}</span>
+            <span class="owner">{ownerName}</span>
+        </div>
+    </div>
+</template>

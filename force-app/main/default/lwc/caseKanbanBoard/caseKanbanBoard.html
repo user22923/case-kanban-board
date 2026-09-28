@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Case Kanban Board" icon-name="standard:case">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading kanban board" size="medium"></lightning-spinner>
+        </template>
+        <template if:true={hasError}>
+            <div class="slds-p-around_medium slds-text-color_error">{errorMessage}</div>
+        </template>
+        <template if:false={isLoading}>
+            <div class="board-container">
+                <template for:each={columns} for:item="column">
+                    <c-case-kanban-column
+                        key={column.status}
+                        status={column.status}
+                        cases={column.cases}
+                        oncarddrop={handleCardDrop}
+                    ></c-case-kanban-column>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>

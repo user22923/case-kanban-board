@@ -1,0 +1,34 @@
+.kanban-column {
+    background: #f3f2f2;
+    border-radius: 0.5rem;
+    min-width: 260px;
+    max-width: 260px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban-column.drag-over {
+    background: #e0f0ff;
+    outline: 2px dashed #0176d3;
+}
+
+.column-header {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #16325c;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem 0;
+}
+
+.column-body {
+    flex: 1;
+    min-height: 80px;
+}
+
+.empty-column {
+    font-size: 0.8rem;
+    color: #a8a8a8;
+    text-align: center;
+    padding: 1rem 0;
+}
